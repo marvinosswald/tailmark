@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Marvinosswald\Tailmark\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class TailmarkCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'tailmark';
 
     public $description = 'My command';
 
