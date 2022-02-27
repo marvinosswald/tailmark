@@ -3,8 +3,8 @@
 namespace Marvinosswald\Tailmark\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use Marvinosswald\Tailmark\TailmarkServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {

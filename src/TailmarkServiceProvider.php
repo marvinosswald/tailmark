@@ -2,8 +2,8 @@
 
 namespace Marvinosswald\Tailmark;
 
-use Spatie\LaravelPackageTools\Package;
 use Marvinosswald\Tailmark\View\Components\Render;
+use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class TailmarkServiceProvider extends PackageServiceProvider

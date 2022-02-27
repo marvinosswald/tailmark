@@ -3,13 +3,13 @@
 namespace Marvinosswald\Tailmark\View\Components;
 
 use Illuminate\View\Component;
-use Marvinosswald\Tailmark\Tailmark;
 use League\CommonMark\MarkdownConverter;
-use League\CommonMark\CommonMarkConverter;
+use Marvinosswald\Tailmark\Tailmark;
 
 class Render extends Component
 {
     public string $markdown;
+
     /**
      * Create a new component instance.
      *

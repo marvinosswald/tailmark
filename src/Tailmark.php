@@ -4,8 +4,8 @@ namespace Marvinosswald\Tailmark;
 
 use League\CommonMark\Environment\Environment;
 use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
-use Marvinosswald\Tailmark\Renderer\Extension\CommonMark\CommonMark;
 use League\CommonMark\Extension\Strikethrough\StrikethroughExtension;
+use Marvinosswald\Tailmark\Renderer\Extension\CommonMark\CommonMark;
 use Marvinosswald\Tailmark\Renderer\Extension\Strikethrough\Strikethrough as StrikethroughTailmark;
 
 class Tailmark
@@ -17,6 +17,7 @@ class Tailmark
         $environment->addExtension(new CommonMark());
         $environment->addExtension(new StrikethroughExtension());
         $environment->addExtension(new StrikethroughTailmark());
+
         return $environment;
     }
 }
