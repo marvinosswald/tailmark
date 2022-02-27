@@ -28,7 +28,8 @@ final class ListBlockRenderer implements NodeRendererInterface
         $tag = $listData->type === ListBlock::TYPE_BULLET ? 'ul' : 'ol';
 
         $attrs = $node->data->get('attributes');
-        $attrs['class'] = ListBlock::TYPE_BULLET ? 'list-disc' : 'list-decimal';
+        $attrs['class'] = $listData->type === ListBlock::TYPE_BULLET ? 'list-disc' : 'list-decimal';
+        $attrs['class'] .= " list-outside";
 
         if ($listData->start !== null && $listData->start !== 1) {
             $attrs['start'] = (string) $listData->start;
