@@ -3,8 +3,8 @@
 namespace Marvinosswald\Tailmark;
 
 use Spatie\LaravelPackageTools\Package;
+use Marvinosswald\Tailmark\View\Components\Render;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Marvinosswald\Tailmark\Commands\TailmarkCommand;
 
 class TailmarkServiceProvider extends PackageServiceProvider
 {
@@ -18,8 +18,7 @@ class TailmarkServiceProvider extends PackageServiceProvider
         $package
             ->name('tailmark')
             ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_tailmark_table')
-            ->hasCommand(TailmarkCommand::class);
+            ->hasViewComponent('tailmark', Render::class)
+            ->hasViews();
     }
 }

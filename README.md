@@ -7,14 +7,6 @@
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/tailmark.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/tailmark)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
-
 ## Installation
 
 You can install the package via composer:
@@ -23,11 +15,10 @@ You can install the package via composer:
 composer require marvinosswald/tailmark
 ```
 
-You can publish and run the migrations with:
+You need to include this line in your content array in your tailwind.config.js.
 
-```bash
-php artisan vendor:publish --tag="tailmark-migrations"
-php artisan migrate
+```js
+    "./vendor/marvinosswald/tailmark/src/Renderer/**/*.php"
 ```
 
 You can publish the config file with:
@@ -40,6 +31,10 @@ This is the contents of the published config file:
 
 ```php
 return [
+    'h' => [
+        1 => "text-extrabold text-3xl"
+        ...
+    ]
 ];
 ```
 
@@ -52,8 +47,7 @@ php artisan vendor:publish --tag="tailmark-views"
 ## Usage
 
 ```php
-$tailmark = new Marvinosswald\Tailmark();
-echo $tailmark->echoPhrase('Hello, Marvinosswald!');
+<x-tailmark-render :markdown="'# Headline'"></x-tailmark-render>
 ```
 
 ## Testing
