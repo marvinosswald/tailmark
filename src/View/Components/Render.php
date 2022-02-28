@@ -9,6 +9,7 @@ use Marvinosswald\Tailmark\Tailmark;
 class Render extends Component
 {
     public string $markdown;
+    public string $html;
 
     /**
      * Create a new component instance.
