@@ -2,9 +2,9 @@
     "name": "marvinosswald/tailmark",
     "description": "Markdown renderer for Tailwind based on Commonmark",
     "keywords": [
-        "marvinosswald",
         "laravel",
-        "tailmark"
+        "tailwind",
+        "markdown"
     ],
     "homepage": "https://github.com/marvinosswald/tailmark",
     "license": "MIT",
